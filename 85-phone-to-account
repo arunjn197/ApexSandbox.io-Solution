@@ -6,6 +6,6 @@ public Map<String, Account> phoneToAccount(List<Account> accounts) {
             phone2Account.put(acc.Phone, acc);
         }
     }
-    System.debug(phone2Account.get('3210987654').AccountNumber);
+    System.debug(phone2Account);
     return phone2Account;
 }
