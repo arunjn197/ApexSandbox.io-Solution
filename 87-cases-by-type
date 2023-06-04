@@ -2,10 +2,12 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     //code here
     Map<String, List<Case>> type2Cases = new Map<String, List<Case>>();
     for(Case objCase : cases){
-        if(!type2Cases.containsKey(objCase.Type)){
-            type2Cases.put(objCase.Type, new List<Case>());
+        if(objCase.Type != null){
+            if(!type2Cases.containsKey(objCase.Type)){
+                type2Cases.put(objCase.Type, new List<Case>());
+            }
+            type2Cases.get(objCase.Type).add(objCase);
         }
-        type2Cases.get(objCase.Type).add(objCase);
     }
     return type2Cases;
 }
