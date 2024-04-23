@@ -1,25 +1,20 @@
 public boolean isSorted(List<Integer> numbers) {
     //code here
-    if(numbers.size()<3){
-        return true;
+    if (list == null || list.size() <= 1) {
+        return true; // An empty list or a list with one element is considered sorted
     }
-    Boolean isAsc = numbers[0] < numbers[1];
-    Integer lastNumber = numbers[0];
-    for(Integer i=1;i<numbers.size();i++){
-        if(numbers[i] == lastNumber){
-            continue;
+    
+    boolean ascending = true;
+    boolean descending = true;
+    
+    for (Integer i = 1; i < numbers.size(); i++) {
+        if (numbers[i] < numbers[i - 1]) {
+            ascending = false; // If any element is less than the previous element, it's not ascending
         }
-        if(isAsc){
-            if(numbers[i]<lastNumber){
-                return false;
-            }
-        }else{
-            if(numbers[i]>lastNumber){
-                return false;
-            }
+        if (numbers[i] > numbers[i - 1]) {
+            descending = false; // If any element is greater than the previous element, it's not descending
         }
-
-        lastNumber = numbers[i];
     }
-    return true;
+    
+    return ascending || descending;
 }
