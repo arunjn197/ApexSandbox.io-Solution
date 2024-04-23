@@ -1,0 +1,20 @@
+public boolean isSorted(List<Integer> numbers) {
+    //code here
+    if(numbers.size()<3){
+        return true;
+    }
+    Boolean isAsc = numbers[0] < numbers[1];
+    Integer lastNumber = numbers[0];
+    for(Integer number : numbers){
+        if(isAsc){
+            if(numbers<lastNumber){
+                return false;
+            }
+        }else{
+            if(numbers>lastNumber){
+                return false;
+            }
+        }
+    }
+    return true;
+}
