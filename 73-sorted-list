@@ -1,6 +1,6 @@
 public boolean isSorted(List<Integer> numbers) {
     //code here
-    if (list == null || list.size() <= 1) {
+    if (numbers == null || numbers.size() <= 1) {
         return true; // An empty list or a list with one element is considered sorted
     }
     
