@@ -5,13 +5,13 @@ public boolean isSorted(List<Integer> numbers) {
     }
     Boolean isAsc = numbers[0] < numbers[1];
     Integer lastNumber = numbers[0];
-    for(Integer number : numbers){
+    for(Integer num : numbers){
         if(isAsc){
-            if(number<lastNumber){
+            if(num<lastNumber){
                 return false;
             }
         }else{
-            if(number>lastNumber){
+            if(num>lastNumber){
                 return false;
             }
         }
