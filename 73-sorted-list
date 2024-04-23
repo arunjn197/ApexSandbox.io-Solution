@@ -7,11 +7,11 @@ public boolean isSorted(List<Integer> numbers) {
     Integer lastNumber = numbers[0];
     for(Integer number : numbers){
         if(isAsc){
-            if(numbers<lastNumber){
+            if(number<lastNumber){
                 return false;
             }
         }else{
-            if(numbers>lastNumber){
+            if(number>lastNumber){
                 return false;
             }
         }
