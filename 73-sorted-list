@@ -10,11 +10,11 @@ public boolean isSorted(List<Integer> numbers) {
             continue;
         }
         if(isAsc){
-            if(numbers[i]>lastNumber){
+            if(numbers[i]<lastNumber){
                 return false;
             }
         }else{
-            if(numbers[i]<lastNumber){
+            if(numbers[i]>lastNumber){
                 return false;
             }
         }
