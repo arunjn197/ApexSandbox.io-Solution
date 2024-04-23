@@ -5,16 +5,18 @@ public boolean isSorted(List<Integer> numbers) {
     }
     Boolean isAsc = numbers[0] < numbers[1];
     Integer lastNumber = numbers[0];
-    for(Integer num : numbers){
+    for(Integer i=1;i<numbers.size();i++){
         if(isAsc){
-            if(num<lastNumber){
+            if(numbers[i]>lastNumber){
                 return false;
             }
         }else{
-            if(num>lastNumber){
+            if(numbers[i]<lastNumber){
                 return false;
             }
         }
+
+        lastNumber = numbers[i];
     }
     return true;
 }
