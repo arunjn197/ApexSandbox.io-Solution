@@ -1,0 +1,30 @@
+public Boolean companionPlants(List<String> plants) {
+    //code here
+    //lettuce and cucumbers, lettuce and onions, onions and carrots, and onions and tomatoes
+
+    Map<String, Set<String>> companionMap = new Map<String, Set<String>>();
+    companionMap.put('lettuce', new Set<String>{'cucumbers', 'onions'});
+    companionMap.put('onions', new Set<String>{'lettuce', 'carrots', 'tomatoes'});
+    companionMap.put('cucumbers', new Set<String>{'lettuce'});
+    companionMap.put('carrots', new Set<String>{'onions'});
+    companionMap.put('tomatoes', new Set<String>{'onions'});
+    
+    Boolean isCompanion = true;
+    for(Integer i=0;i<plants.size()-1;i++){
+        String firstPlant = plants.get(i);
+        String secondPlant = plants.get(i+1);
+
+        if(!companionMap.containsKey(firstPlant)){
+            isCompanion = false;
+        }
+
+        if(companionMap.containsKey(firstPlant)){
+            if(!companionMap.get(firstPlant).contains(secondPlant)){
+                isCompanion = false;
+                break;
+            }
+        }
+    }
+
+    return isCompanion;
+}
