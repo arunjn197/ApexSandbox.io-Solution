@@ -3,7 +3,7 @@ public Boolean companionPlants(List<String> plants) {
     //lettuce and cucumbers, lettuce and onions, onions and carrots, and onions and tomatoes
 
     if(plants.size() == 1){
-        return true;
+        return false;
     }
     Map<String, Set<String>> companionMap = new Map<String, Set<String>>();
     companionMap.put('lettuce', new Set<String>{'cucumbers', 'onions'});
