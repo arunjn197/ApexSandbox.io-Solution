@@ -17,15 +17,9 @@ public Boolean companionPlants(List<String> plants) {
         String firstPlant = plants.get(i);
         String secondPlant = plants.get(i+1);
 
-        if(!companionMap.containsKey(firstPlant)){
+        if((!companionMap.containsKey(firstPlant)) || (companionMap.containsKey(firstPlant) && !companionMap.get(firstPlant).contains(secondPlant))){
             isCompanion = false;
-        }
-
-        if(companionMap.containsKey(firstPlant)){
-            if(!companionMap.get(firstPlant).contains(secondPlant)){
-                isCompanion = false;
-                break;
-            }
+            break;
         }
     }
 
