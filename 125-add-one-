@@ -7,7 +7,7 @@ public void plusOne(List<Integer> numbers) {
     }
     Long wholeNumber;
     if(String.isNotBlank(numAsString)){
-         = Long.valueOf(numAsString);
+        wholeNumber = Long.valueOf(numAsString);
     }
 
     if(wholeNumber != null){
