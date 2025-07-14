@@ -1,0 +1,24 @@
+public void plusOne(List<Integer> numbers) {
+    // code here
+    List<Integer> output = new List<Integer>();
+    String numAsString = '';
+    for(Integer num : numbers){
+        numAsString += String.valueOf(num);
+    }
+    Long wholeNumber;
+    if(String.isNotBlank(numAsString)){
+         = Long.valueOf(numAsString);
+    }
+
+    if(wholeNumber != null){
+        wholeNumber += 1;
+    }
+
+    numAsString = String.valueOf(wholeNumber);
+
+    for(Integer i=0;i<numAsString.length();i++){
+        output.add(Integer.valueOf(numAsString.get(i)));
+    }
+
+    System.debug(output);
+}
