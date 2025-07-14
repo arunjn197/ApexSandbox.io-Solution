@@ -16,8 +16,8 @@ public void plusOne(List<Integer> numbers) {
 
     numAsString = String.valueOf(wholeNumber);
 
-    for(Integer i=0;i<numAsString.length();i++){
-        output.add(Integer.valueOf(numAsString.get(i)));
+    for(String digit : numAsString.split('')){
+        output.add(Integer.valueOf(digit));
     }
 
     System.debug(output);
